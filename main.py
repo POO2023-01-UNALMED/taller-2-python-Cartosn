@@ -1,7 +1,5 @@
 class Asiento:
 
-    registro = None
-
     def __init__(self, color, precio, registro):
         self.color = color
         self.precio = precio
@@ -14,7 +12,6 @@ class Asiento:
 
 
 class Motor:
-    registro = None
 
     def __init__(self, numercilindros, tipo, registro):
         self.numeroCilindros = numercilindros
@@ -36,7 +33,7 @@ class Auto:
     def __init__(self, modelo, precio, asientos, marca, motor, registro):
         self.modelo = modelo
         self.precio = precio
-        self.asientos = [Asiento(asientos)]
+        self.asientos = asientos
         self.marca = marca
         self.motor = motor
         self.registro = registro
@@ -48,7 +45,7 @@ class Auto:
                 asientos += 1
 
     def verificarIntegridad(self):
-        if self.registro == Motor.registro:
+        if self.registro == self.motor.registro:
             for asiento in self.asientos:
                 if asiento is not None:
                     if asiento.registro != self.registro:
