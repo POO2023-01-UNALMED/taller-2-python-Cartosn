@@ -43,6 +43,7 @@ class Auto:
         for asiento in self.asientos:
             if asiento is not None:
                 asientos += 1
+        return asientos
 
     def verificarIntegridad(self):
         if self.registro == self.motor.registro:
