@@ -38,7 +38,7 @@ class Auto:
         self.precio = precio
         self.asientos = [Asiento]
         self.marca = marca
-        self.motor = Motor
+        self.motor = Motor()
         self.registro = registro
         self.cantidadCreados = cantidadcreados
 
